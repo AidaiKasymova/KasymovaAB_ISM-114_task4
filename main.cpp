@@ -1,38 +1,56 @@
-#include<iostream>
-#include <iomanip>
-#include "geometry.h"
+#include "Pyramid.h"
 
-using namespace std;
-
-int main() 
+int main()
 {
-	double R, h, a, b;
-	cin >> R >> h >> a >> b;
+	system("chcp 1251");
+	system("cls");
 
-	calculations figure(R, h, a, b);
-
-	cout << "select a shape: 1-ball, 2-cylinder, 3-pyramid" << endl;
 	int num;
-	cin >> num;
+	
+	Sphere sphere;
+	Cylinder cylinder;
+	Pyramid pyramid;
 
-	if (num == 1) {
-		setprecision(5);
-		cout << figure.get_Sball() << endl;
-		
-		cout << figure.get_Vball() << endl;
-	}
-	else if (num == 2) {
-		setprecision(5);
-		cout << figure.get_Scylinder() << endl;
-		cout << figure.get_Vcylinder() << endl;
-	}
-	else if (num == 3) {
-		setprecision(5);
-		cout << figure.get_Spyramid() << endl;
-		cout << figure.get_Vpyramid() << endl;
-	}
-	else
-		cout << "mistake" << endl;
+	double r, a, h;
 
+	while (true)
+	{
+		cout << "Выберите фигуру." << endl;
+		cout << "1 - Шар" << endl;
+		cout << "2 - Цилиндр" << endl;
+		cout << "3 - Правильная треугольная пирамида" << endl;
+		cout << "Другой номер - выход." << endl;
+		cin >> num;
+		if (num == 1)
+		{
+			cout << "Введите радиус шара: ";
+			cin >> r;
+			sphere = Sphere(r);
+			sphere.printInfo(cout);
+		}
+		else if (num == 2)
+		{
+			cout << "Введите радиус цилиндра: ";
+			cin >> r;
+			cout << "Введите высоту цилиндра: ";
+			cin >> h;
+			cylinder = Cylinder(r, h);
+			cylinder.printInfo(cout);
+		}
+		else if (num == 3)
+		{
+			cout << "Введите длину стороны пирамиды: ";
+			cin >> a;
+			cout << "Введите высоту пирамиды: ";
+			cin >> h;
+			pyramid = Pyramid(a, h);
+			pyramid.printInfo(cout);
+		}
+		else
+			break;
+	}
 
+	system("pause");
+
+	return 0;
 }
