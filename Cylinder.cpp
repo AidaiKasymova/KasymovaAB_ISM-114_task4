@@ -3,7 +3,7 @@
 Cylinder::Cylinder(const double _radius, const double _height) : Sphere(_radius)
 {
 	if (_height <= 0)
-		throw "Âûñîòà ôèãóğû äîëæíà áûòü íåîòğèöàòåëüíûì ÷èñëîì!\n";
+		throw "Ğ’Ñ‹ÑĞ¾Ñ‚Ğ° Ñ„Ğ¸Ğ³ÑƒÑ€Ñ‹ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ½ĞµĞ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¼ Ñ‡Ğ¸ÑĞ»Ğ¾Ğ¼!\n";
 	else
 		height = _height;
 }
@@ -26,7 +26,7 @@ double Cylinder::volume()
 
 void Cylinder::printInfo(ostream& out)
 {
-	out << "Öèëèíäğ ğàäèóñà " << radius << ", âûñîòîé " << height <<
-		", ñ ïëîùàäüş ïîëíîé ïîâåğõíîñòè " << square()
-		<< " è îáúåìîì " << volume() << endl;
+	out << "Ğ¦Ğ¸Ğ»Ğ¸Ğ½Ğ´Ñ€ Ñ€Ğ°Ğ´Ğ¸ÑƒÑĞ° " << radius << ", Ğ²Ñ‹ÑĞ¾Ñ‚Ğ¾Ğ¹ " << height <<
+		", Ñ Ğ¿Ğ»Ğ¾Ñ‰Ğ°Ğ´ÑŒÑ Ğ¿Ğ¾Ğ»Ğ½Ğ¾Ğ¹ Ğ¿Ğ¾Ğ²ĞµÑ€Ñ…Ğ½Ğ¾ÑÑ‚Ğ¸ " << square()
+		<< " Ğ¸ Ğ¾Ğ±ÑŠĞµĞ¼Ğ¾Ğ¼ " << volume() << endl;
 }
