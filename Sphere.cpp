@@ -3,7 +3,7 @@
 Sphere::Sphere(const double _radius)
 {
 	if (_radius <= 0)
-		throw "Ðàäèóñ ôèãóðû äîëæåí áûòü íåîòðèöàòåëüíûì ÷èñëîì!\n";
+		throw "Ð Ð°Ð´Ð¸ÑƒÑ Ñ„Ð¸Ð³ÑƒÑ€Ñ‹ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼!\n";
 	else
 		radius = _radius;
 }
@@ -25,7 +25,7 @@ double Sphere::square()
 
 void Sphere::printInfo(ostream& out)
 {
-	out << "Øàð ðàäèóñà " << radius <<
-		" ñ ïëîùàäüþ ïîëíîé ïîâåðõíîñòè " << square()
-		<< " è îáúåìîì " << volume() << endl;
+	out << "Ð¨Ð°Ñ€ Ñ€Ð°Ð´Ð¸ÑƒÑÐ° " << radius <<
+		" Ñ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒÑŽ Ð¿Ð¾Ð»Ð½Ð¾Ð¹ Ð¿Ð¾Ð²ÐµÑ€Ñ…Ð½Ð¾ÑÑ‚Ð¸ " << square()
+		<< " Ð¸ Ð¾Ð±ÑŠÐµÐ¼Ð¾Ð¼ " << volume() << endl;
 }
