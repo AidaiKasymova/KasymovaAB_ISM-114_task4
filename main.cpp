@@ -11,39 +11,39 @@ int main()
 	Cylinder cylinder;
 	Pyramid pyramid;
 
-	double r, a, h;
+	double radius, a, height;
 
 	while (true)
 	{
-		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ„Ð¸Ð³ÑƒÑ€Ñƒ." << endl;
-		cout << "1 - Ð¨Ð°Ñ€" << endl;
-		cout << "2 - Ð¦Ð¸Ð»Ð¸Ð½Ð´Ñ€" << endl;
-		cout << "3 - ÐŸÑ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð°Ñ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð°Ñ Ð¿Ð¸Ñ€Ð°Ð¼Ð¸Ð´Ð°" << endl;
-		cout << "Ð”Ñ€ÑƒÐ³Ð¾Ð¹ Ð½Ð¾Ð¼ÐµÑ€ - Ð²Ñ‹Ñ…Ð¾Ð´." << endl;
+		cout << "Âûáåðèòå ôèãóðó." << endl;
+		cout << "1 - Øàð" << endl;
+		cout << "2 - Öèëèíäð" << endl;
+		cout << "3 - Ïðàâèëüíàÿ òðåóãîëüíàÿ ïèðàìèäà" << endl;
+		cout << "Äðóãîé íîìåð - âûõîä." << endl;
 		cin >> num;
 		if (num == 1)
 		{
-			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ ÑˆÐ°Ñ€Ð°: ";
-			cin >> r;
-			sphere = Sphere(r);
+			cout << "Ââåäèòå ðàäèóñ øàðà: ";
+			cin >> radius;
+			sphere = Sphere(radius);
 			sphere.printInfo(cout);
 		}
 		else if (num == 2)
 		{
-			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ Ñ†Ð¸Ð»Ð¸Ð½Ð´Ñ€Ð°: ";
-			cin >> r;
-			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ Ñ†Ð¸Ð»Ð¸Ð½Ð´Ñ€Ð°: ";
-			cin >> h;
-			cylinder = Cylinder(r, h);
+			cout << "Ââåäèòå ðàäèóñ öèëèíäðà: ";
+			cin >> radius;
+			cout << "Ââåäèòå âûñîòó öèëèíäðà: ";
+			cin >> height;
+			cylinder = Cylinder(radius, height);
 			cylinder.printInfo(cout);
 		}
 		else if (num == 3)
 		{
-			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹ Ð¿Ð¸Ñ€Ð°Ð¼Ð¸Ð´Ñ‹: ";
+			cout << "Ââåäèòå äëèíó ñòîðîíû ïèðàìèäû: ";
 			cin >> a;
-			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ Ð¿Ð¸Ñ€Ð°Ð¼Ð¸Ð´Ñ‹: ";
-			cin >> h;
-			pyramid = Pyramid(a, h);
+			cout << "Ââåäèòå âûñîòó ïèðàìèäû: ";
+			cin >> height;
+			pyramid = Pyramid(a, height);
 			pyramid.printInfo(cout);
 		}
 		else

@@ -10,54 +10,33 @@ private:
 	/// <summary>
 	/// Высота цилиндра
 	/// </summary>
-	double h;
+	double height;
 public:
 	/// <summary>
 	/// Конструктор с параметрами
 	/// </summary>
-	Cylinder(double radius, double height): Sphere(radius)
-	{
-		if (height <= 0)
-			cerr << "Высота фигуры должна быть неотрицательным числом!\n";
-		else
-			h = height;
-	}
+	Cylinder(double _radius, double _height);
 
 	/// <summary>
 	/// Конструктор по умолчанию
 	/// </summary>
-	Cylinder(): Sphere()
-	{
-		h = 1;
-	}
+	Cylinder();
 
 	/// <summary>
 	/// Вычисление площади полной поверхности цилиндра
 	/// </summary>
 	/// <returns></returns>
-	double square() override
-	{
-		return 2 * M_PI * r * h +
-			2 * M_PI * r * r;
-	}
+	double square() override;
 
 	/// <summary>
 	/// Вычисление объема цилиндра
 	/// </summary>
 	/// <returns></returns>
-	double volume() override
-	{
-		return M_PI * r * r * h;
-	}
+	double volume() override;
 
 	/// <summary>
 	/// Вывод информации
 	/// </summary>
 	/// <param name="out"></param>
-	void printInfo(ostream& out) override
-	{
-		out << "Цилиндр радиуса " << r << ", высотой " << h << 
-			", с площадью полной поверхности " << square()
-			<< " и объемом " << volume() << endl;
-	}
+	void printInfo(ostream& out) override;
 };

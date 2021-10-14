@@ -1,6 +1,6 @@
 #pragma once
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <cmath>
 #include <iostream>
 using namespace std;
 
@@ -10,10 +10,7 @@ using namespace std;
 class Shape
 {
 public:
-	/// <summary>
-	/// Конструктор по умолчанию
-	/// </summary>
-	Shape() {};
+	~Shape(){};
 	// чистые виртуальные методы:
 	virtual double volume() = 0;
 	virtual double square() = 0;
@@ -29,57 +26,37 @@ protected:
 	/// <summary>
 	/// Радиус шара
 	/// </summary>
-	double r = 1;
+	double radius = 1;
 
 public:
 	/// <summary>
 	/// Создает объект с заданными значениями 
 	/// (конструктор с параметром - значением радиуса)
 	/// </summary>
-	/// <param name="radius"></param>
-	Sphere(double radius)
-	{
-		if (radius <= 0)
-			cerr << "Радиус фигуры должен быть неотрицательным числом!\n";
-		else
-			r = radius;
-	}
+	/// <param name="_radius"></param>
+	Sphere(const double _radius);
 
 	/// <summary>
 	/// Конструктор по умолчанию
 	/// (создает шар с единичным радиусом)
 	/// </summary>
-	Sphere()
-	{
-		r = 1;
-	}
+	Sphere();
 
 	/// <summary>
 	/// Вычисление объема шара
 	/// </summary>
 	/// <returns></returns>
-	virtual double volume()
-	{
-		return (4.0 * M_PI * r * r * r) / 3.0;
-	}
+	virtual double volume();
 
 	/// <summary>
 	/// Вычисление площади полной поверхности шара
 	/// </summary>
 	/// <returns></returns>
-	virtual double square()
-	{
-		return 4.0 * M_PI * r * r;
-	}
+	virtual double square();
 
 	/// <summary>
 	/// Вывод информации
 	/// </summary>
 	/// <param name="out"></param>
-	virtual void printInfo(ostream& out)
-	{
-		out << "Шар радиуса " << r << 
-			" с площадью полной поверхности " << square() 
-			<< " и объемом " << volume() << endl;
-	}
+	virtual void printInfo(ostream& out);
 };

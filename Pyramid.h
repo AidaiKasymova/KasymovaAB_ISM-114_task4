@@ -10,7 +10,7 @@ private:
 	/// <summary>
 	/// Высота
 	/// </summary>
-	double h;
+	double height;
 
 	/// <summary>
 	/// Длина стороны
@@ -20,58 +20,30 @@ public:
 	/// <summary>
 	/// Конструктор по умолчанию
 	/// </summary>
-	Pyramid()
-	{
-		a = 1;
-		h = 1;
-	}
+	Pyramid();
 
 	/// <summary>
 	/// Конструктор с параметрами
 	/// </summary>
-	Pyramid(double side, double height)
-	{
-		if (height <= 0)
-			cerr << "Высота фигуры должна быть неотрицательным числом!\n";
-		else
-			h = height;
-
-		if (side <= 0)
-			cerr << "Сторона фигуры должна быть неотрицательным числом!\n";
-		else
-			a = side;
-	}
+	Pyramid(const double side, const double _height);
 
 	/// <summary>
 	/// Вычисление площади полной поверхности 
 	/// правильной треугольной пирамиды
 	/// </summary>
 	/// <returns></returns>
-	double square() override
-	{
-		double deg = 60 * M_PI / 180.0;
-		return (3.0 * a / 2.0) * (a / (2.0 * tan(deg)) + 
-			sqrt(h * h + pow(a / (2.0 * tan(deg)), 2)));
-	}
+	double square() override;
 
 	/// <summary>
 	/// Вычисление объема 
 	/// правильной треугольной пирамиды
 	/// </summary>
 	/// <returns></returns>
-	double volume() override
-	{
-		return (a * a * h) / (4 * sqrt(3));
-	}
+	double volume() override;
 
 	/// <summary>
 	/// Вывод информации
 	/// </summary>
 	/// <param name="out"></param>
-	void printInfo(ostream& out) override
-	{
-		out << "Правильная треугольная пирамида со стороной " 
-			<< a << ", высотой " << h << ", с площадью полной поверхности " 
-			<< square() << " и объемом " << volume() << endl;
-	}
+	void printInfo(ostream& out) override;
 };
