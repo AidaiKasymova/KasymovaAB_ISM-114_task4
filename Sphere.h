@@ -10,11 +10,10 @@ using namespace std;
 class Shape
 {
 public:
-	~Shape(){};
+	virtual ~Shape() {};
 	// чистые виртуальные методы:
 	virtual double volume() = 0;
 	virtual double square() = 0;
-	virtual void printInfo(ostream& out) = 0;
 };
 
 /// <summary>
@@ -43,6 +42,11 @@ public:
 	Sphere();
 
 	/// <summary>
+	/// Деструктор по умолчанию
+	/// </summary>
+	~Sphere();
+
+	/// <summary>
 	/// Вычисление объема шара
 	/// </summary>
 	/// <returns></returns>
@@ -58,5 +62,5 @@ public:
 	/// Вывод информации
 	/// </summary>
 	/// <param name="out"></param>
-	virtual void printInfo(ostream& out);
+	friend ostream& operator<<(ostream& os, Sphere&);
 };
