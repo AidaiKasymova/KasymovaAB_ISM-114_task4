@@ -2,45 +2,45 @@
 #include "Sphere.h"
 
 /// <summary>
-/// Производный от шара класс цилиндра
+/// РџСЂРѕРёР·РІРѕРґРЅС‹Р№ РѕС‚ С€Р°СЂР° РєР»Р°СЃСЃ С†РёР»РёРЅРґСЂР°
 /// </summary>
 class Cylinder : public Sphere
 {
 private:
 	/// <summary>
-	/// Высота цилиндра
+	/// Р’С‹СЃРѕС‚Р° С†РёР»РёРЅРґСЂР°
 	/// </summary>
 	double height;
 public:
 	/// <summary>
-	/// Конструктор с параметрами
+	/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	/// </summary>
 	Cylinder(double _radius, double _height);
 
 	/// <summary>
-	/// Конструктор по умолчанию
+	/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	/// </summary>
 	Cylinder();
 
 	/// <summary>
-	/// Деструктор по умолчанию
+	/// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	/// </summary>
 	~Cylinder();
 
 	/// <summary>
-	/// Вычисление площади полной поверхности цилиндра
+	/// Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё РїРѕР»РЅРѕР№ РїРѕРІРµСЂС…РЅРѕСЃС‚Рё С†РёР»РёРЅРґСЂР°
 	/// </summary>
 	/// <returns></returns>
 	double square() override;
 
 	/// <summary>
-	/// Вычисление объема цилиндра
+	/// Р’С‹С‡РёСЃР»РµРЅРёРµ РѕР±СЉРµРјР° С†РёР»РёРЅРґСЂР°
 	/// </summary>
 	/// <returns></returns>
 	double volume() override;
 
 	/// <summary>
-	/// Вывод информации
+	/// Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё
 	/// </summary>
 	/// <param name="out"></param>
 	friend ostream& operator<<(ostream& os, Cylinder&);
